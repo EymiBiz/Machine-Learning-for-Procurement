@@ -142,17 +142,17 @@ Usa una **cascada (waterfall)** si quieres explicar la variación anual por unid
 
 ## 4. Diseño visual
 
-### 4.1 Paleta (corporativa, sobria y accesible)
+### 4.1 Paleta (corporativa, sobria y accesible; la misma del tema JSON de la maqueta)
 | Rol | Color | Uso |
 |---|---|---|
-| Primario | `#1F3A5F` (azul marino) | Serie principal y títulos de KPI. |
-| Secundario | `#4A7BA7` (azul medio) | Segunda serie. |
-| Acento / alerta | `#E8871E` (naranja) | **Solo** para lo que debe llamar la atención (proveedor sobre el umbral, mes anómalo). |
-| Comparativo | `#A6ADB4` (gris) | Año anterior, benchmarks y la cola larga del Pareto. |
-| Positivo / negativo | `#2E8B57` / `#C0392B` | Solo en variaciones. Recuerda que en compras **más gasto no es "bueno"**: define la semántica y aplícala igual en todo el reporte. |
-| Fondo lienzo | `#F4F6F8` | Fondo de página. |
-| Fondo tarjetas | `#FFFFFF` con borde `#E1E5EA` y radio 8px | Contenedores de visuales. |
-| Texto | `#1B1F24` principal, `#5F6B7A` secundario | |
+| Primario | `#2F5478` (azul acero) | Serie principal y títulos de KPI. |
+| Secundario | `#7FA3C4` (azul claro) | Segunda serie, clase B del Pareto. |
+| Comparativo | `#B9BDC2` (gris) | Año anterior, benchmarks y la cola larga del Pareto. |
+| Acento / alerta | `#D08A1E` (naranja) | **Solo** para lo que debe llamar la atención (proveedor sobre el umbral, mes anómalo). |
+| Sube / baja | `#B8473D` / `#2F8062` | Solo en variaciones. En compras **más gasto no es "bueno"**: ▲ rojo = el gasto sube, ▼ verde = el gasto baja, igual en todo el reporte. |
+| Unidades de negocio | `#3F6C97` Manufactura · `#3A8583` Distribución · `#7C6FA3` Servicios | Siempre el mismo color por unidad. |
+| Fondo lienzo / tarjetas | `#EEF0F2` / `#FFFFFF` con borde `#DCDFE3` | Contenedores de visuales. |
+| Texto | `#1D1F20` principal, `#5B6168` secundario | |
 
 - Asigna un **color fijo por unidad de negocio** y mantenlo en todas las páginas (Manufactura, Distribución, Servicios).
 - Guarda todo en un **archivo de tema JSON** (Vista → Temas → Personalizar → Guardar). Así demuestras estandarización.
@@ -196,3 +196,8 @@ Usa una **cascada (waterfall)** si quieres explicar la variación anual por unid
 2. Agrega una página inicial o un README con el problema, los datos, el modelo (captura de la vista de modelo) y **3 hallazgos con recomendación**. Por ejemplo: "consolidar 40 proveedores de cola larga en 5 → ahorro estimado X%".
 3. Publica en *Publish to web* (con los datos anonimizados) o sube un video de 2 minutos recorriendo el reporte y enlázalo en LinkedIn.
 4. En la entrevista, explica **decisiones**: por qué modelo estrella, por qué excluir IGV, cómo tratas las devoluciones y qué KPI no calculaste por limitación del dato.
+
+---
+
+## 6. Maqueta interactiva
+`maqueta/Dashboard_Compras.dc.html` es la maqueta de las 4 páginas en un lienzo de 1280×720, con datos ficticios, filtros sincronizados, drill-through a la página 4 y botón para descargar el tema JSON. Ábrela junto a `support.js`.
